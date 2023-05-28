@@ -108,6 +108,14 @@ class BinarySearch{
         }
 
     }
+    max(root){
+        if(!root.right){
+            return root.value
+        }else{
+            return this.max(root.right)
+        }
+
+    }
 
 } 
 
@@ -123,5 +131,5 @@ console.log(bst.root);
 
 console.log(bst.search(bst.root,10));
 console.log(bst.search(bst.root,5));
-console.log(bst.search(bst.root,15));
-bst.levelOrder(bst.root)
+console.log(bst.min(bst.root));
+console.log(bst.max(bst.root));

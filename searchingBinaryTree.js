@@ -77,6 +77,29 @@ class BinarySearch{
         }
     }
 
+    postOrder(root){
+        if(root){
+            this.postOrder(root.left)
+            this.postOrder(root.right)
+            console.log(root.value);
+        }
+    }
+
+    levelOrder(){
+        const queue = []
+        queue.push(this.root)
+        while(queue.length){
+            let curr = queue.shift()
+            console.log(curr.value);
+            if(curr.left){
+                queue.push(curr.left)
+            }
+            if(curr.right){
+                queue.push(curr.right)
+            }
+        }
+    }
+
 } 
 
 const bst =  new BinarySearch()
@@ -92,4 +115,4 @@ console.log(bst.root);
 console.log(bst.search(bst.root,10));
 console.log(bst.search(bst.root,5));
 console.log(bst.search(bst.root,15));
-bst.inOrder(bst.root)
+bst.levelOrder(bst.root)

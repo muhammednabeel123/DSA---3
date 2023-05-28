@@ -100,6 +100,15 @@ class BinarySearch{
         }
     }
 
+    min(root){
+        if(!root.left){
+            return root.value
+        }else{
+            return this.min(root.left)
+        }
+
+    }
+
 } 
 
 const bst =  new BinarySearch()

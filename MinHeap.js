@@ -93,5 +93,5 @@ const heap = new Heap()
 let array = [10,5,15,3,8]
 heap.buildheap(array);
 
-
+heap.insert(1)
 heap.display()

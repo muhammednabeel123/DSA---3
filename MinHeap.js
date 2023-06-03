@@ -23,7 +23,7 @@ class Heap{
             if(rightindex <= endindex&&this.heap[rightindex] < this.heap[leftindex]){
                 shifttobe = rightindex;
             }else{
-                shifttobe = leftindex;
+                shifttobe = leftindex;      
             }
             if(this.heap[current]>this.heap[shifttobe]){
                 [this.heap[current],this.heap[shifttobe]] = [this.heap[shifttobe],this.heap[current]];
@@ -64,7 +64,7 @@ class Heap{
         [this.heap[0],this.heap[this.heap.length-1]] = [this.heap[this.heap.length-1],this.heap[0]];
         let number = this.heap.pop()
         this.shiftdown(0)
-        return number;
+        return number; 
     }
 
     insert(value){

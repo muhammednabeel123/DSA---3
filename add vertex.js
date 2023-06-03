@@ -22,7 +22,7 @@ class Graph{
 
     removeVertex(vertex){
         while(this.adjacencyList[vertex].length){
-            const adjustVertex = this.adjacencyList[vertex].pop
+            const adjustVertex = this.adjacencyList[vertex].pop()
         }
     }
 
@@ -34,9 +34,8 @@ class Graph{
     
         visited[start] = true;
         while (stack.length) {
-            console.log("Stack:", stack);
+           
             currentVertex = stack.pop();
-            console.log("Current Vertex:", currentVertex);
             result.push(currentVertex);
     
             this.adjacencyList[currentVertex].forEach(neighbor => {

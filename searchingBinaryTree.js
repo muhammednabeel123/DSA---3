@@ -33,7 +33,7 @@ class BinarySearch{
             }else{
                 this.insertNode(root.left,newNode)
             }
-        }else{
+        }else{ 
              if(root.right === null){
                 root.right = newNode
              }else{
